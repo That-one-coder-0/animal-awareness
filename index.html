@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Protection - Save Endangered Species</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Background Image Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1606856110002-d0991ce78250?w=1200&h=600&fit=crop') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #1abc9c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #16a085;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #000;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #000;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f0f8ff;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: #0066cc;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Endangered Species Section */
+        .species {
+            background-color: #ffffff;
+        }
+
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .species-card {
+            background: linear-gradient(135deg, #1abc9c, #0066cc);
+            padding: 25px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .species-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .species-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .species-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Action Section */
+        .action {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            color: white;
+        }
+
+        .action-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .action-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .action-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#species">Species</a></li>
+            <li><a href="#action">Take Action</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Save Our Wildlife</h1>
+            <p>Together we can protect endangered species and preserve our planet's biodiversity</p>
+            <a href="#action" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Animal Endangerment</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Why It Matters</h2>
+                <p>Thousands of animal species face extinction due to habitat loss, climate change, poaching, and human interference. These creatures play vital roles in our ecosystems, and their disappearance can have cascading effects on nature and human survival.</p>
+                <p>From majestic tigers to tiny sea turtles, every species contributes to the delicate balance of life on Earth. Conservation efforts are more critical than ever.</p>
+            </div>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>We are dedicated to raising awareness about endangered species and promoting conservation efforts worldwide. Through education, advocacy, and action, we work to ensure that future generations can experience the wonder of wildlife.</p>
+                <p>Join us in making a difference. Every action counts in the fight to save our planet's incredible biodiversity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Endangered Species Section -->
+    <section class="species" id="species">
+        <h2 class="section-title">Endangered Species in Focus</h2>
+        <div class="species-grid">
+            <div class="species-card">
+                <h3>Giant Pandas</h3>
+                <p>Once hunted to near extinction, giant pandas are making a comeback through international conservation efforts and habitat protection in China.</p>
+            </div>
+            <div class="species-card">
+                <h3>Sea Turtles</h3>
+                <p>Ocean pollution, fishing nets, and climate change threaten sea turtles. Protecting nesting beaches is crucial for their survival.</p>
+            </div>
+            <div class="species-card">
+                <h3>African Elephants</h3>
+                <p>Poaching and habitat loss have decimated elephant populations. These intelligent giants need our protection and larger reserves.</p>
+            </div>
+            <div class="species-card">
+                <h3>Polar Bears</h3>
+                <p>Melting ice due to climate change is destroying polar bear habitats. They depend on sea ice for survival and hunting.</p>
+            </div>
+            <div class="species-card">
+                <h3>Orangutans</h3>
+                <p>Deforestation in Southeast Asia is destroying orangutan habitats. These intelligent primates need rainforest protection.</p>
+            </div>
+            <div class="species-card">
+                <h3>Blue Whales</h3>
+                <p>The largest animals on Earth were hunted to near extinction. Ocean protection and sustainable fishing practices are vital.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="action" id="action">
+        <div class="action-content">
+            <h2>How You Can Help</h2>
+            <p>Every action makes a difference. Support wildlife conservation, reduce your carbon footprint, and spread awareness about endangered species.</p>
+            <ul style="list-style: none; margin: 30px 0; font-size: 1.1rem;">
+                <li>✓ Donate to conservation organizations</li>
+                <li>✓ Support sustainable and ethical products</li>
+                <li>✓ Reduce plastic consumption</li>
+                <li>✓ Advocate for environmental protection policies</li>
+                <li>✓ Educate others about wildlife conservation</li>
+            </ul>
+            <a href="#contact" class="cta-button" style="background-color: #fff; color: #1abc9c;">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: #f0f8ff;">
+        <h2 class="section-title">Get In Touch</h2>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Have questions or want to support wildlife conservation?</p>
+            <form style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" placeholder="Your Name" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;">
+                <input type="email" placeholder="Your Email" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;">
+                <textarea placeholder="Your Message" rows="5" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;"></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2026 Wildlife Conservation Initiative. All rights reserved.</p>
+        <p>Dedicated to protecting endangered species and preserving biodiversity for future generations.</p>
+    </footer>
+</body>
+</html>
