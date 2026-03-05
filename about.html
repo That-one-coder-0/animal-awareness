@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Wildlife Protection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        nav {
+            background-color: #000;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #1abc9c;
+        }
+        section {
+            padding: 100px 20px 60px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #000;
+        }
+        .about {
+            background-color: #f0f8ff;
+        }
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="species.html">Species</a></li>
+            <li><a href="action.html">Take Action</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Animal Endangerment</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Why It Matters</h2>
+                <p>Thousands of animal species face extinction due to habitat loss, climate change, poaching, and human interference. These creatures play vital roles in our ecosystems, and their disappearance can have cascading effects on nature and human survival.</p>
+                <p>From majestic tigers to tiny sea turtles, every species contributes to the delicate balance of life on Earth. Conservation efforts are more critical than ever.</p>
+            </div>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>We are dedicated to raising awareness about endangered species and promoting conservation efforts worldwide. Through education, advocacy, and action, we work to ensure that future generations can experience the wonder of wildlife.</p>
+                <p>Join us in making a difference. Every action counts in the fight to save our planet's incredible biodiversity.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2026 Wildlife Conservation Initiative. All rights reserved.</p>
+        <p>Dedicated to protecting endangered species and preserving biodiversity for future generations.</p>
+    </footer>
+</body>
+</html>

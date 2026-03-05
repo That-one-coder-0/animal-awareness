@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Species - Wildlife Protection</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        nav { background-color: #000; padding: 1rem 2rem; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        nav a:hover { color: #1abc9c; }
+        section { padding: 100px 20px 60px; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #000; }
+        .species-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .species-card { background: linear-gradient(135deg, #1abc9c, #0066cc); padding: 25px; border-radius: 10px; color: white; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .species-card:hover { transform: translateY(-10px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
+        .species-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .species-card p { font-size: 0.95rem; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="species.html">Species</a></li>
+            <li><a href="action.html">Take Action</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="species" id="species">
+        <h2 class="section-title">Endangered Species in Focus</h2>
+        <div class="species-grid">
+            <div class="species-card">
+                <h3>Giant Pandas</h3>
+                <p>Once hunted to near extinction, giant pandas are making a comeback through international conservation efforts and habitat protection in China.</p>
+            </div>
+            <div class="species-card">
+                <h3>Sea Turtles</h3>
+                <p>Ocean pollution, fishing nets, and climate change threaten sea turtles. Protecting nesting beaches is crucial for their survival.</p>
+            </div>
+            <div class="species-card">
+                <h3>African Elephants</h3>
+                <p>Poaching and habitat loss have decimated elephant populations. These intelligent giants need our protection and larger reserves.</p>
+            </div>
+            <div class="species-card">
+                <h3>Polar Bears</h3>
+                <p>Melting ice due to climate change is destroying polar bear habitats. They depend on sea ice for survival and hunting.</p>
+            </div>
+            <div class="species-card">
+                <h3>Orangutans</h3>
+                <p>Deforestation in Southeast Asia is destroying orangutan habitats. These intelligent primates need rainforest protection.</p>
+            </div>
+            <div class="species-card">
+                <h3>Blue Whales</h3>
+                <p>The largest animals on Earth were hunted to near extinction. Ocean protection and sustainable fishing practices are vital.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2026 Wildlife Conservation Initiative. All rights reserved.</p>
+        <p>Dedicated to protecting endangered species and preserving biodiversity for future generations.</p>
+    </footer>
+</body>
+</html>

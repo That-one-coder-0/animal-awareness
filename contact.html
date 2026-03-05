@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Wildlife Protection</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; }
+        nav { background-color:#000; padding:1rem 2rem; position:fixed; width:100%; top:0; z-index:1000; }
+        nav ul { list-style:none; display:flex; justify-content:center; gap:2rem; }
+        nav a { color:white; text-decoration:none; font-weight:500; transition:color 0.3s ease; }
+        nav a:hover { color:#1abc9c; }
+        section { padding:100px 20px 60px; text-align:center; background-color:#f0f8ff; }
+        form { display:flex; flex-direction:column; gap:15px; max-width:600px; margin:0 auto; }
+        input, textarea { padding:12px; border:2px solid #1abc9c; border-radius:5px; }
+        .cta-button { display:inline-block; padding:15px 40px; background-color:#1abc9c; color:white; text-decoration:none; border-radius:5px; font-size:1.1rem; transition:background-color 0.3s ease; border:none; cursor:pointer; }
+        .cta-button:hover { background-color:#16a085; }
+        #statusMessage { margin-top:10px; font-size:0.95rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="species.html">Species</a></li>
+            <li><a href="action.html">Take Action</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Have questions or want to support wildlife conservation?</p>
+        <form id="contactForm" action="https://formsubmit.co/alej10kleon@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Wildlife Conservation Contact Form Message">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+            <p id="statusMessage"></p>
+        </form>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2026 Wildlife Conservation Initiative. All rights reserved.</p>
+        <p>Dedicated to protecting endangered species and preserving biodiversity for future generations.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const statusMessage = document.getElementById('statusMessage');
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            statusMessage.textContent = '';
+            const formData = new FormData(this);
+            fetch('https://formsubmit.co/alej10kleon@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    statusMessage.textContent = '✓ Message sent successfully!';
+                    statusMessage.style.color = '#1abc9c';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                statusMessage.textContent = '✗ Failed to send message. Please try again.';
+                statusMessage.style.color = '#e74c3c';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            });
+        });
+    </script>
+</body>
+</html>
