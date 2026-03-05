@@ -156,27 +156,27 @@ section {
 }
 /*indivdual card animation*/
 #species-card1:hover{
-    background: linear-gradient(rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
+    background: linear-gradient(135deg,rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
     url(../images/species_card1.jpg) center/cover;
 }
 #species-card2:hover{
-    background: linear-gradient(rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
     url(../images/species_card2.jpg) center/cover;
 }
 #species-card3:hover{
-    background: linear-gradient(rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
     url(../images/species_card3.jpg) center/cover;
 }
 #species-card4:hover{
-    background: linear-gradient(rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
     url(../images/species_card4.jpg) center/cover;
 }
 #species-card5:hover{
-    background: linear-gradient(rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
     url(../images/species_card5.jpg) center/cover;
 }
 #species-card6:hover{
-    background: linear-gradient(rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
     url(../images/species_card6.jpg) center/cover;
 }
 /* Action Section */
