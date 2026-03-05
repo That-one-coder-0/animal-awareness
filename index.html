@@ -311,10 +311,14 @@
         <h2 class="section-title">Get In Touch</h2>
         <div style="max-width: 600px; margin: 0 auto; text-align: center;">
             <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Have questions or want to support wildlife conservation?</p>
-            <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" id="userName" placeholder="Your Name" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;">
-                <input type="email" id="userEmail" placeholder="Your Email" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;">
-                <textarea id="userMessage" placeholder="Your Message" rows="5" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;"></textarea>
+            <form id="contactForm" action="https://formsubmit.co/alej10kleon@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Formsubmit hidden fields for configuration -->
+                <input type="hidden" name="_subject" value="New Wildlife Conservation Contact Form Message">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;">
+                <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;">
+                <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 12px; border: 2px solid #1abc9c; border-radius: 5px;"></textarea>
                 <button type="submit" class="cta-button">Send Message</button>
                 <p id="statusMessage" style="margin-top: 10px; font-size: 0.95rem;"></p>
             </form>
@@ -327,14 +331,8 @@
         <p>Dedicated to protecting endangered species and preserving biodiversity for future generations.</p>
     </footer>
 
-    <!-- EmailJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
-    
+    <!-- Formsubmit Script -->
     <script>
-        // Initialize EmailJS (Replace with your actual Public Key from EmailJS)
-        emailjs.init("YOUR_PUBLIC_KEY_HERE");
-
-        // Handle form submission
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
             
@@ -346,29 +344,32 @@
             submitButton.textContent = 'Sending...';
             statusMessage.textContent = '';
 
-            // Get form values
-            const templateParams = {
-                to_email: 'aelj10kleon@gmail.com',
-                user_name: document.getElementById('userName').value,
-                user_email: document.getElementById('userEmail').value,
-                user_message: document.getElementById('userMessage').value
-            };
-
-            // Send email using EmailJS
-            emailjs.send("YOUR_SERVICE_ID_HERE", "YOUR_TEMPLATE_ID_HERE", templateParams)
-                .then(function(response) {
+            // Create FormData from the form
+            const formData = new FormData(this);
+            
+            // Send to Formsubmit
+            fetch('https://formsubmit.co/alej10kleon@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
                     statusMessage.textContent = '✓ Message sent successfully!';
                     statusMessage.style.color = '#1abc9c';
                     document.getElementById('contactForm').reset();
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Send Message';
-                }, function(error) {
-                    statusMessage.textContent = '✗ Failed to send message. Please try again.';
-                    statusMessage.style.color = '#e74c3c';
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Send Message';
-                    console.error('EmailJS Error:', error);
-                });
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                statusMessage.textContent = '✗ Failed to send message. Please try again.';
+                statusMessage.style.color = '#e74c3c';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            });
         });
     </script>
 </body>
