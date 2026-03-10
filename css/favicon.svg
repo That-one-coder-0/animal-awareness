@@ -1,12 +1,12 @@
-<svg id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="96.444, 86.444, 186.142, 216.816">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg" width="400" height="400" viewBox="120.444, 91.444, 187.142, 216.816">
 <defs>
     <linearGradient id="gradient">
-    <stop offset="0%" stop-color="#00ff00" />
-    <stop offset="30%" stop-color="#00c900" />
-    <stop offset="40%" stop-color="#00a500" />
-    <stop offset="60%" stop-color="#008d00" />
-    <stop offset="80%" stop-color="#005f00" />
-    <stop offset="100%" stop-color="#003800" />
+    <stop offset="0%" stop-color="#00ff00"/>
+    <stop offset="30%" stop-color="#00c900"/>
+    <stop offset="40%" stop-color="#00a500"/>
+    <stop offset="60%" stop-color="#008d00"/>
+    <stop offset="80%" stop-color="#005f00"/>
+    <stop offset="100%" stop-color="#003800"/>
     </linearGradient>
 </defs>
 <g id="svgg">
