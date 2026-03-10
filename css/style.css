@@ -29,13 +29,13 @@ body {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(121, 255, 199, 0.7);
 }
 
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px rgba(121, 255, 199, 0.7);
 }
 
 .cta-button {
