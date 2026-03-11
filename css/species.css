@@ -88,30 +88,28 @@ section {
     line-height: 1.6;
 }
 /*indivdual card animation*/
-#species-card1:hover{
-    background: linear-gradient(135deg,rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
-    url(../images/species_card1.jpg) center/cover;
+.species-card {
+    background-size: cover;
+    background-position: center;
 }
-#species-card2:hover{
-    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
-    url(../images/species_card2.jpg) center/cover;
+
+.species-card:hover {
+    background-image: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), var(--card-bg);
 }
-#species-card3:hover{
-    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
-    url(../images/species_card3.jpg) center/cover;
-}
-#species-card4:hover{
-    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
-    url(../images/species_card4.jpg) center/cover;
-}
-#species-card5:hover{
-    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
-    url(../images/species_card5.jpg) center/cover;
-}
-#species-card6:hover{
-    background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
-    url(../images/species_card6.jpg) center/cover;
-}
+
+#species-card1 { --card-bg: url(../images/speciesCards/1.jpg); }
+#species-card2 { --card-bg: url(../images/speciesCards/2.jpg); }
+#species-card3 { --card-bg: url(../images/speciesCards/3.jpg); }
+#species-card4 { --card-bg: url(../images/speciesCards/4.jpgg); }
+#species-card5 { --card-bg: url(../images/speciesCards/5.jpg); }
+#species-card6 { --card-bg: url(../images/speciesCards/6.jpg); }
+#species-card7 { --card-bg: url(../images/speciesCards/7.jpg); }
+#species-card8 { --card-bg: url(../images/speciesCards/8.jpg); }
+#species-card9 { --card-bg: url(../images/speciesCards/9.jpg); }
+#species-card10 { --card-bg: url(../images/speciesCards/10.jpg); }
+#species-card11 { --card-bg: url(../images/speciesCards/11.jpg); }
+#species-card12 { --card-bg: url(../images/speciesCards/12.jpg); }
+#species-card13 { --card-bg: url(../images/speciesCards/13.jpg); }
 footer {
     background-color: #000;
     color: white;
