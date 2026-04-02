@@ -123,9 +123,6 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        padding: 1rem;
-    }
 
     nav ul {
         flex-direction: column;
