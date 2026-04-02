@@ -227,6 +227,10 @@ footer p {
         font-size: 1rem;
     }
 
+    nav {
+        padding: 1rem;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 1rem;
@@ -234,9 +238,86 @@ footer p {
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .species-grid {
+        gap: 20px;
+    }
+
+    .species-card {
+        padding: 20px;
+    }
+
+    .action-content ul {
+        text-align: center;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        padding: 10px;
+    }
+
+    #footer {
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    .species-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .species-card {
+        padding: 15px;
+    }
+
+    .action-content ul {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        padding: 8px;
+        font-size: 0.9rem;
     }
 }
