@@ -217,6 +217,10 @@ footer p {
     margin-bottom: 10px;
 }
 
+li{
+    font-size: 1.6vw;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content h1 {
