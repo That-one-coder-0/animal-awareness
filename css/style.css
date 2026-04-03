@@ -65,6 +65,10 @@ nav {
     z-index: 1000;
 }
 
+nav li{
+    font-size: 10px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
