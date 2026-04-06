@@ -187,6 +187,47 @@ section {
     background: linear-gradient(135deg, rgba(26, 188, 156, 0.5), rgba(0, 102, 204, 0.5)), 
     url(../images/index/species_card6.jpg) center/cover;
 }
+/* Shelter Table */
+.shelter-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.shelter-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.shelter-table th,
+.shelter-table td {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.shelter-table th {
+    background-color: #1abc9c;
+    color: white;
+    font-weight: 600;
+}
+
+.shelter-table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.shelter-table a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.shelter-table a:hover {
+    text-decoration: underline;
+}
+
 /* Action Section */
 .action {
     background: linear-gradient(135deg, #1abc9c, #16a085);
